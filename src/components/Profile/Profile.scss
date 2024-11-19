@@ -1,3 +1,34 @@
 .trophyCase {
-	background-color: var(--purple);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.trophy-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 3 columns */
+	grid-template-rows: auto; /* Adjust rows dynamically */
+	gap: 16px; /* Space between items */
+	max-width: 600px; /* Optional width constraint */
+	margin: 0 auto;
+}
+
+.trophy-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.trophy-icon {
+	width: 80px; /* Adjust size as needed */
+	height: 80px;
+	object-fit: contain;
+}
+
+.trophy-item p {
+	margin-top: 8px;
+	font-size: 14px;
+	color: white;
 }
