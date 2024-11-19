@@ -6,10 +6,9 @@ import Container from "~/components/Container";
 import NavBar from "~/components/NavBar/NavBar";
 
 export default function HomeRoute() {
-  const [challenges] = createResource(getChallenges); // Resource voor alle challenges
-  const [searchQuery, setSearchQuery] = createSignal(""); // State voor zoekopdracht
+  const [challenges] = createResource(getChallenges);
+  const [searchQuery, setSearchQuery] = createSignal("");
 
-  // Filter challenges op basis van de zoekterm
   const filteredChallenges = () =>
     challenges()?.filter((challenge) =>
       challenge.name.toLowerCase().includes(searchQuery().toLowerCase())
@@ -20,25 +19,24 @@ export default function HomeRoute() {
       <NavBar />
       <Container>
         <Show when={challenges()} fallback={"Loading..."}>
-
-          {/* Zoekbalk */}
-          <input
-            type="text"
-            placeholder="Search challenges..."
-            value={searchQuery()}
-            onInput={(e) => setSearchQuery(e.target.value)}
-            style={{
-              width: "100%",
-              padding: "10px",
-              marginBottom: "20px",
-              fontSize: "16px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-            }}
-          />
-
-          {/* Gefilterde lijst met challenges */}
           <div>
+            {/* Search Bar */}
+            <input
+              type="text"
+              placeholder="Search challenges..."
+              value={searchQuery()}
+              onInput={(e) => setSearchQuery(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "10px",
+                marginBottom: "20px",
+                fontSize: "16px",
+                borderRadius: "5px",
+                border: "1px solid #ccc",
+              }}
+            />
+
+            {/* Filtered Challenge List */}
             {filteredChallenges()?.map((challenge) => (
               <A href="/reaction-speed-challenge">
                 <ChallengeCard challenge={challenge} />
