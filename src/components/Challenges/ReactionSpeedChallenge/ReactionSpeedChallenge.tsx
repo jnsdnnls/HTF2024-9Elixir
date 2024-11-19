@@ -2,9 +2,10 @@ import { A, action, createAsync, useAction } from "@solidjs/router";
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import { getChallenge, upsertUserChallenge as uUc } from "~/api/server";
 import { ChallengesMap } from "~/constants";
-import NavBar from "../NavBar/NavBar";
+
 import "./ReactionSpeedChallenge.scss";
-import Container from "../Container";
+import NavBar from "~/components/NavBar/NavBar";
+import Container from "~/components/Container";
 
 type Position = {
   top: number;
