@@ -1,18 +1,27 @@
 .wrapper {
-  background-color: #1f1f1f;
+	background-color: var(--clr-secondary);
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
 }
 
 form {
-  display: flex;
-  padding: 8px;
-  margin: -8px;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+	display: flex;
+	padding: 8px;
+	margin: -8px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.right {
+	display: flex;
+	align-items: center;
+}
+
+.right a {
+	margin-left: 8px;
 }
