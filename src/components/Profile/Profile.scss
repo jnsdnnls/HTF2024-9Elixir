@@ -1,8 +1,27 @@
+.trophyContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .trophyCase {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	margin-top: 20px;
+	width: 600px;
+	font-family: var(--ff-title);
+}
+
+.trophyCase h2 {
+	font-size: 24px;
+	color: white;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+.trophy-title {
+	font-weight: bold;
 }
 
 .trophy-grid {
@@ -31,4 +50,8 @@
 	margin-top: 8px;
 	font-size: 14px;
 	color: white;
+}
+
+.score {
+	font-weight: bold;
 }
