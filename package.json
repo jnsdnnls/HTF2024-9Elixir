@@ -21,6 +21,7 @@
     "better-sqlite3": "^11.0.0",
     "drizzle-orm": "^0.32.2",
     "oslo": "^1.2.1",
+    "react-draggable": "^4.4.6",
     "solid-js": "^1.8.18",
     "vinxi": "^0.4.1"
   },
