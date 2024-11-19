@@ -2,7 +2,7 @@ import "./profile.scss";
 import NavBar from "../NavBar/NavBar";
 import Container from "../Container";
 import { createAsync } from "@solidjs/router";
-import { getUserChallengeScores } from "~/api/server";
+import { getUser, getUserChallengeScores } from "~/api/server";
 
 // Trophy Icon Mapping Function
 function getTrophyIcon(score: number | null) {
@@ -20,6 +20,14 @@ const Profile = ({ user }: { user: any }) => {
 		<>
 			<NavBar />
 			<div class="trophyContainer">
+				<div class="profile">
+					<img
+						class="userIcon"
+						src={`https://ui-avatars.com/api/?name=${user.username || "Guest"}&background=random`}
+						alt={`${user.username || "Guest"}'s Avatar`}
+					/>
+					<h1>{user.username}</h1>
+				</div>
 				<div class="trophyCase">
 					<h2>My Challenges: </h2>
 					{score.loading && <p>Loading scores...</p>}
