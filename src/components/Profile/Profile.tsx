@@ -19,8 +19,9 @@ const Profile = ({ user }: { user: any }) => {
 	return (
 		<>
 			<NavBar />
-			<Container>
+			<div class="trophyContainer">
 				<div class="trophyCase">
+					<h2>My Challenges: </h2>
 					{score.loading && <p>Loading scores...</p>}
 					{score.error && <p>Error loading scores: {score.error.message}</p>}
 					{score() && (
@@ -33,12 +34,15 @@ const Profile = ({ user }: { user: any }) => {
 										class="trophy-icon"
 									/>
 									<p class="trophy-title">{challenge.challengeName}</p>
+									<p>
+										{challenge.userScore ? "Your score: " + challenge.userScore : "Try this challenge to earn a score!"}
+									</p>
 								</div>
 							))}
 						</div>
 					)}
 				</div>
-			</Container>
+			</div>
 		</>
 	);
 };

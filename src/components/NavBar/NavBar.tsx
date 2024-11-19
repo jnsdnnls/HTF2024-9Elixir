@@ -17,6 +17,7 @@ const NavBar = () => {
 							<div class="right">
 								<A href="/">Home</A>
 								<A href="/profile">Profile</A>
+								<A href="/challenges">Challenges</A>
 								<button name="logout" type="submit">
 									Logout
 								</button>
