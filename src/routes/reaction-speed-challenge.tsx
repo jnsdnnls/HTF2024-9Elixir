@@ -1,4 +1,4 @@
-import ReactionSpeedChallenge from "~/components/ReactionSpeedChallenge/ReactionSpeedChallenge";
+import ReactionSpeedChallenge from "~/components/Challenges/ReactionSpeedChallenge/ReactionSpeedChallenge";
 
 const ReactionSpeedChallengeRoute = () => {
   return <ReactionSpeedChallenge />;
