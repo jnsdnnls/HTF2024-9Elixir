@@ -1,137 +1,146 @@
 @font-face {
-  font-family: 'moliga_demoregular';
-  src: url('moliga-webfont.woff2') format('woff2'),
-       url('moliga-webfont.woff') format('woff');
+  font-family: "moliga_demoregular";
+  src: url("moliga-webfont.woff2") format("woff2"),
+    url("moliga-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+
 :root {
-	--clr-primary
+  --clr-primary: hsl(259, 67%, 33%);
+  --clr-secondary: hsl(265, 33%, 11%);
+  --clr-light: hsl(0, 0%, 96%);
+  --clr-neutral: hsl(0, 0%, 15%);
+  --clr-dark: hsl(0, 0%, 5%);
+
+  --ff-title: "moliga_demoregular", sans-serif;
+  --ff-body: "Roboto", sans-serif;
 }
 
 body {
-	font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	overflow: hidden;
+  font-family: var(--ff-body);
+  overflow: hidden;
 }
 
 a {
-	margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 html {
-	background-color: #0d0b0a;
-	height: 100%;
-	font-family: Arial, Helvetica, sans-serif;
-	color: white;
+  background-color: var(--clr-dark);
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--clr-light);
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
 }
 
 .logo-login {
-	width: 150px;
-	margin-bottom: 20px;
-	border-radius: 20px;
+  width: 150px;
+  margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 h1 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--clr-light);
+  margin-bottom: 20px;
 }
 
 .login-form {
-	background-color: #1f1f1f;
-	padding: 20px 40px;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	width: 100%;
-	max-width: 400px;
-	width: 400px;
+  background-color: #1f1f1f;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--clr-dark);
+  width: 100%;
+  max-width: 400px;
+  width: 400px;
 }
 
 fieldset {
-	border: none;
-	margin-bottom: 20px;
+  border: none;
+  margin-bottom: 20px;
 }
 
 legend {
-	font-size: 1.2rem;
-	margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 label {
-	display: block;
-	font-size: 1rem;
-	margin-bottom: 10px;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
 input[type="text"],
 input[type="password"] {
-	width: 100%;
-	box-sizing: border-box;
-	padding: 10px;
-	margin-top: 5px;
-	margin-bottom: 20px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid var(--clr-neutral);
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 input[type="radio"] {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 button {
-	padding: 10px;
-	background-color: #007bff;
-	color: #ffffff;
-	border: none;
-	border-radius: 4px;
-	font-size: 1rem;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+  padding: 10px;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-	background-color: #0056b3;
+  background-color: var(--clr-secondary);
 }
 
 #error-message {
-	margin-top: 20px;
-	color: red;
-	font-size: 0.9rem;
+  margin-top: 20px;
+  color: hsl(0, 100%, 50%);
+  font-size: 0.9rem;
 }
 
 @media (max-width: 480px) {
-	form {
-		padding: 20px;
-	}
+  form {
+    padding: 20px;
+  }
 
-	.logo {
-		width: 100px;
-	}
+  .logo {
+    width: 100px;
+  }
 
-	h1 {
-		font-size: 1.5rem;
-	}
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 .input-container {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 a {
-	color: black;
-	text-decoration: none;
+  color: var(--clr-dark);
+  text-decoration: none;
 }
 
 #login-button {
-	width: 100%;
+  width: 100%;
 }
