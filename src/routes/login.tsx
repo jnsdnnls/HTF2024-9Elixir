@@ -1,10 +1,11 @@
 import { useSubmission, type RouteSectionProps } from "@solidjs/router";
-import { Show } from "solid-js";
+import { Show, createSignal } from "solid-js";
 import { loginOrRegister } from "~/api";
 import Container from "~/components/Container";
 
 export default function LoginRoute(props: RouteSectionProps) {
   const loggingIn = useSubmission(loginOrRegister);
+  const [loginType, setLoginType] = createSignal("login"); // Keep track of the selected option
 
   return (
     <Container>
@@ -20,14 +21,28 @@ export default function LoginRoute(props: RouteSectionProps) {
           name="redirectTo"
           value={props.params.redirectTo ?? "/"}
         />
+        <input type="hidden" name="loginType" value={loginType()} />
         <fieldset>
-          <label>
-            <input type="radio" name="loginType" value="login" checked={true} />
+          <div
+            class="option"
+            onClick={() => setLoginType("login")}
+            style={{
+              backgroundColor:
+                loginType() === "login" ? "var(--clr-secondary)" : "var(--clr-primary)",
+            }}
+          >
             Login
-          </label>
-          <label>
-            <input type="radio" name="loginType" value="register" /> Register
-          </label>
+          </div>
+          <div
+            class="option"
+            onClick={() => setLoginType("register")}
+            style={{
+              backgroundColor:
+                loginType() === "register" ? "var(--clr-secondary)" : "var(--clr-primary)",
+            }}
+          >
+            Register
+          </div>
         </fieldset>
         <div class="input-container">
           <label for="username">Username</label>
@@ -42,7 +57,7 @@ export default function LoginRoute(props: RouteSectionProps) {
           />
         </div>
         <button id="login-button" type="submit">
-          Login
+          {loginType() === "login" ? "Login" : "Register"}
         </button>
         <Show when={loggingIn.result}>
           <p style={{ color: "red" }} role="alert" id="error-message">

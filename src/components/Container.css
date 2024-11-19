@@ -3,3 +3,101 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Login Form Styles */
+.login-form {
+  background-color: var(--clr-secondary);
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px hsla(0, 0%, 0%, 0.5);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.logo-login {
+  width: 180px;
+  margin: 20px auto 25px; /* Plaatst het logo iets lager */
+  border-radius: 50%; /* Houdt het logo in een ronde vorm */
+}
+
+/* Verwijder de witte cirkel rond de afbeelding */
+.logo-login::before {
+  content: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--clr-light);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+fieldset .option {
+  flex: 1;
+  margin: 0 5px;
+  text-align: center;
+  padding: 12px 0;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-weight: normal; /* Geen bold tekst */
+}
+
+fieldset .option:hover {
+  background-color: var(--clr-secondary);
+  transform: scale(1.02); /* Subtiel hover-effect */
+}
+
+button {
+  padding: 12px;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: normal; /* Geen bold tekst */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--clr-secondary);
+  transform: scale(1.02); /* Subtiel hover-effect */
+}
+
+/* Verwijder random plek rechtsboven */
+.login-form::before {
+  content: none;
+}
+
+#error-message {
+  margin-top: 20px;
+  color: hsl(0, 100%, 70%);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 20px;
+  }
+
+  .logo-login {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
