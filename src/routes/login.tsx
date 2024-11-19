@@ -10,7 +10,7 @@ export default function LoginRoute(props: RouteSectionProps) {
     <Container>
       <img
         class="logo-login"
-        src="../../logo_htf.webp"
+        src="../../9_elixir.png"
         alt="Space Cadet Program"
       />
       <h1>Space Cadet Program</h1>
@@ -41,7 +41,9 @@ export default function LoginRoute(props: RouteSectionProps) {
             autocomplete="current-password"
           />
         </div>
-        <button id="login-button" type="submit">Login</button>
+        <button id="login-button" type="submit">
+          Login
+        </button>
         <Show when={loggingIn.result}>
           <p style={{ color: "red" }} role="alert" id="error-message">
             {loggingIn.result!.message}
