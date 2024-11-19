@@ -1,0 +1,12 @@
+.challengeCard {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.challengeCard:hover {
+  border: 1px solid white;
+}
