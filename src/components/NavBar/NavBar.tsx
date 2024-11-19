@@ -1,7 +1,7 @@
 import { getUser, logout } from "~/api";
 import "./NavBar.css";
 import { A, createAsync } from "@solidjs/router";
-import Container from "./Container";
+import Container from "../Container";
 
 const NavBar = () => {
   const user = createAsync(async () => getUser(), { deferStream: true });
