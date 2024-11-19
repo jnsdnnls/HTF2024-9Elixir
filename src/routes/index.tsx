@@ -1,7 +1,7 @@
 import { A } from "@solidjs/router";
 import { createResource, Show } from "solid-js";
 import { getChallenges } from "~/api/server";
-import ChallengeCard from "~/components/ChallengeCard";
+import ChallengeCard from "~/components/ChallengeCard/ChallengeCard";
 import Container from "~/components/Container";
 import NavBar from "~/components/NavBar/NavBar";
 
