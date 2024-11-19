@@ -1,7 +1,7 @@
 CREATE TABLE `challenges` (
 	`id` integer PRIMARY KEY NOT NULL,
 	`name` text DEFAULT '' NOT NULL,
-	`description` text DEFAULT '' NOT NULL
+	`description` text DEFAULT '' NOT NULL,
 );
 --> statement-breakpoint
 CREATE TABLE `user_challenges` (
